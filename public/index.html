@@ -1,23 +1,136 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <title>CSS/HTML Workshop with Convargo</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <!-- Animate.css -->
+  	<link rel="stylesheet" href="css/animate.css">
+  	<!-- Bootstrap  -->
+  	<link rel="stylesheet" href="css/bootstrap.css">
+  	<!-- Theme style  -->
+  	<link rel="stylesheet" href="css/style.css">
+    <!-- Animated input spinner -->
+  	<link rel="stylesheet" href="css/animatedinputspinner.css">
+
   </head>
   <body>
-    <div id="trucker">
-      <input class="name" type="text" placeholder="Trucker name"/>
-      <input class="price-by-km" type="number" placeholder="Price by km"/>
-      <input class="price-by-cubic" type="number" placeholder="Price by m3"/>
-    </div>
-    <div id="shipper">
-      <input class="name" type="text" placeholder="Shipper name"/>
-      <input class="distance" type="number" placeholder="Distance in km"/>
-      <input class="volume" type="number" placeholder="Volume in m3"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
-    </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
-    <script src="convargo.js"></script>
-    <script src="index.js"></script>
+    <div id="page">
+
+  	<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(background.jpg)">
+  		<div class="overlay"></div>
+  		<div class="gtco-container">
+  			<div class="row">
+  				<div class="col-md-12 col-md-offset-0 text-left">
+
+  					<div class="row row-mt-15em">
+  						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+  							<h1>Ship your goods</h1>
+  						</div>
+  						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+  							<div class="form-wrap">
+  								<div class="tab">
+
+  									<div class="tab-content">
+  										<div class="tab-content-inner active" data-content="signup">
+  											<h3>Book Your Trip</h3>
+  											<form action="#">
+                          <div id="trucker">
+    												<div class="row form-group">
+    													<div class="col-md-12">
+    														<label class="name" for="fullname">Trucker Name</label>
+    														<input type="text" id="fullname" class="form-control">
+    													</div>
+    												</div>
+                            <div class="row form-group">
+    													<div class="col-md-12">
+    														<label class="price-by-km" for="activities">Price per km</label>
+                                <div class='ctrl'>
+                                    <div class='ctrl__button ctrl__button--decrement'>&ndash;</div>
+                                    <div class='ctrl__counter'>
+                                      <input class='ctrl__counter-input' maxlength='10' type='text' value='0'>
+                                      <div class='ctrl__counter-num'>0</div>
+                                    </div>
+                                    <div class='ctrl__button ctrl__button--increment'>+</div>
+                                </div>
+    													</div>
+    												</div>
+                            <div class="row form-group">
+    													<div class="col-md-12">
+    														<label class="price-by-cubic" for="activities">Price per m3</label>
+                                <div class='ctrl'>
+                                    <div class='ctrl__button ctrl__button--decrement'>&ndash;</div>
+                                    <div class='ctrl__counter'>
+                                      <input class='ctrl__counter-input' maxlength='10' type='text' value='0'>
+                                      <div class='ctrl__counter-num'>0</div>
+                                    </div>
+                                    <div class='ctrl__button ctrl__button--increment'>+</div>
+                                </div>
+    													</div>
+    												</div>
+                          </div>
+                          <div id="shipper">
+    												<div class="row form-group">
+    													<div class="col-md-12">
+    														<label for="fullname">Shipper Name</label>
+    														<input type="text" id="fullname" class="form-control">
+    													</div>
+    												</div>
+                            <div class="row form-group">
+    													<div class="col-md-12">
+    														<label class="distance"  for="activities">Distance in km</label>
+                                <div class='ctrl'>
+                                    <div class='ctrl__button ctrl__button--decrement'>&ndash;</div>
+                                    <div class='ctrl__counter'>
+                                      <input class='ctrl__counter-input' maxlength='10' type='text' value='0'>
+                                      <div class='ctrl__counter-num'>0</div>
+                                    </div>
+                                    <div class='ctrl__button ctrl__button--increment'>+</div>
+                                </div>
+    													</div>
+    												</div>
+                            <div class="row form-group">
+    													<div class="col-md-12">
+    														<label class="volume"  for="activities">Volume in m3</label>
+                                <div class='ctrl'>
+                                    <div class='ctrl__button ctrl__button--decrement'>&ndash;</div>
+                                    <div class='ctrl__counter'>
+                                      <input class='ctrl__counter-input' maxlength='10' type='text' value='0'>
+                                      <div class='ctrl__counter-num'>0</div>
+                                    </div>
+                                    <div class='ctrl__button ctrl__button--increment'>+</div>
+                                </div>
+    													</div>
+    												</div>
+                          </div>
+                          <input class="option" type="checkbox" placeholder="Deductible option">Deductible option</input  >
+
+                          <!--
+  												<div class="row form-group">
+  													<div class="col-md-12">
+  														<input type="submit" class="btn btn-primary btn-block" value="Compute">
+  													</div>
+  												</div>
+                        -->
+                        <button id="compute">Compute</button>
+                        <div id="actors"></div>
+  											</form>
+  										</div>
+
+
+  									</div>
+  								</div>
+  							</div>
+  						</div>
+  					</div>
+
+
+  				</div>
+  			</div>
+  		</div>
+  <script type="text/javascript" src="animatedinputspinner.js"></script>
+  <script src="convargo.js"></script>
+  <script src="index.js"></script>
   </body>
 </html>
