@@ -24,9 +24,10 @@
   			<div class="row">
   				<div class="col-md-12 col-md-offset-0 text-left">
 
-  					<div class="row row-mt-15em">
+  					<div class="row row-mt-5em">
   						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-  							<h1>Ship your goods</h1>
+  							<h1>Ship your goods all over Europe in a few clicks !</h1>
+                <h2 >By D.R.</h2>
   						</div>
   						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
   							<div class="form-wrap">
@@ -34,7 +35,7 @@
 
   									<div class="tab-content">
   										<div class="tab-content-inner active" data-content="signup">
-  											<h3>Book Your Trip</h3>
+  											<h3> Debit and credit prices</h3>
   											<form action="#">
                           <div id="trucker">
     												<div class="row form-group">
@@ -44,31 +45,29 @@
     													</div>
     												</div>
                             <div class="row form-group">
-    													<div class="col-md-12">
+    													<div class="col-md-6 col-md-1">
     														<label class="price-by-km" for="activities">Price per km</label>
                                 <div class='ctrl'>
                                     <div class='ctrl__button ctrl__button--decrement'>&ndash;</div>
                                     <div class='ctrl__counter'>
-                                      <input class='ctrl__counter-input' maxlength='10' type='text' value='0'>
+                                      <input id="price_by_km" class='ctrl__counter-input' minlength="0" maxlength='10' type='text' value='0'>
                                       <div class='ctrl__counter-num'>0</div>
                                     </div>
                                     <div class='ctrl__button ctrl__button--increment'>+</div>
                                 </div>
     													</div>
-    												</div>
-                            <div class="row form-group">
-    													<div class="col-md-12">
+    													<div class="col-md-6 col-md-1">
     														<label class="price-by-cubic" for="activities">Price per m3</label>
                                 <div class='ctrl'>
                                     <div class='ctrl__button ctrl__button--decrement'>&ndash;</div>
                                     <div class='ctrl__counter'>
-                                      <input class='ctrl__counter-input' maxlength='10' type='text' value='0'>
+                                      <input id="price_by_m3" class='ctrl__counter-input' minlength="0" maxlength='10' type='text' value='0'>
                                       <div class='ctrl__counter-num'>0</div>
                                     </div>
                                     <div class='ctrl__button ctrl__button--increment'>+</div>
                                 </div>
     													</div>
-    												</div>
+                            </div>
                           </div>
                           <div id="shipper">
     												<div class="row form-group">
@@ -78,34 +77,36 @@
     													</div>
     												</div>
                             <div class="row form-group">
-    													<div class="col-md-12">
+    													<div class="col-md-6 col-md-1">
     														<label class="distance"  for="activities">Distance in km</label>
                                 <div class='ctrl'>
                                     <div class='ctrl__button ctrl__button--decrement'>&ndash;</div>
                                     <div class='ctrl__counter'>
-                                      <input class='ctrl__counter-input' maxlength='10' type='text' value='0'>
+                                      <input class='ctrl__counter-input' minlength="0" maxlength='10' type='text' value='0'>
                                       <div class='ctrl__counter-num'>0</div>
                                     </div>
                                     <div class='ctrl__button ctrl__button--increment'>+</div>
                                 </div>
     													</div>
-    												</div>
-                            <div class="row form-group">
-    													<div class="col-md-12">
+
+    													<div class="col-md-6 col-md-1">
     														<label class="volume"  for="activities">Volume in m3</label>
                                 <div class='ctrl'>
                                     <div class='ctrl__button ctrl__button--decrement'>&ndash;</div>
                                     <div class='ctrl__counter'>
-                                      <input class='ctrl__counter-input' maxlength='10' type='text' value='0'>
+                                      <input class='ctrl__counter-input' minlength="0" maxlength='10' type='text' value='0'>
                                       <div class='ctrl__counter-num'>0</div>
                                     </div>
                                     <div class='ctrl__button ctrl__button--increment'>+</div>
                                 </div>
     													</div>
-    												</div>
+                            </div>
                           </div>
-                          <input class="option" type="checkbox" placeholder="Deductible option">Deductible option</input  >
-
+                          <div class="row form-group">
+                            <div class="col-md-12">
+                                <input class="option" type="checkbox" placeholder="Deductible option">Deductible option</input  >
+                            </div>
+                          </div>
                           <!--
   												<div class="row form-group">
   													<div class="col-md-12">
@@ -113,8 +114,13 @@
   													</div>
   												</div>
                         -->
-                        <button id="compute">Compute</button>
-                        <div id="actors"></div>
+                        <div class="form-group">
+            							<input id="compute" type="submit" value="Compute" class="btn btn-primary">
+            						</div>
+
+                        <div class="row form-group">
+                          <div class ="col-md-12" id="actors"></div>
+                        </div>
   											</form>
   										</div>
 
@@ -129,6 +135,7 @@
   				</div>
   			</div>
   		</div>
+    </div>
   <script type="text/javascript" src="animatedinputspinner.js"></script>
   <script src="convargo.js"></script>
   <script src="index.js"></script>
